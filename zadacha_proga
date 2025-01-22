@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+int main();
+
+void zadacha1(){
+    int countss, xx, maximum;
+    maximum = 0;
+    cout << "введите кол-во чисел:\n"; cin >> countss;
+    cout << "\nВведите сами числа:\n";
+    for(int i = 0; i < countss; i++){
+        cin >> xx;
+        if(xx % 5 == 0 && xx > maximum){
+            maximum = xx;
+        }
+    }
+    cout << "\nМаксимально число кратное 5:\n\n" << maximum;
+    main();
+}
+
+void zadacha2(){
+    int counts, x, schet;
+    cout << "Введите кол-во чисел:\n";
+    cin >> counts; cout << "\n\n";
+    cout << "Введите сами числа:\n";
+    for(int i = 0; i < counts; i++){
+        cin >> x;
+        if(x % 6 == 0){
+            schet += x;
+        }
+    }
+    cout << "\n\n\n\nСумма чисел кратных шести:\n\n" << schet;
+    main();
+}
+
+int main()
+{
+    int vibor;
+    cout << "\n\n\tВыберите нужную задачу:\n";
+    cin >> vibor;
+    if(vibor == 1){
+        zadacha1();
+    }
+    else if(vibor == 2){
+        zadacha2();
+    }
+}
